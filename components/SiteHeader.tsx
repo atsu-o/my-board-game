@@ -35,9 +35,8 @@ export default function SiteHeader() {
     <>
       <header className="sticky top-0 z-50 border-b border-purple-900/40 bg-[#1a0f24]/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
-          <a href="#" className="truncate font-black tracking-wide">
-            <span className="text-[#ff3b3b]">サイ</span>
-            <span className="text-[#4db8ff]">の河原</span>
+          <a href="#" className="truncate text-base font-bold tracking-wide text-white sm:text-lg">
+            サイの河原
           </a>
 
           <button

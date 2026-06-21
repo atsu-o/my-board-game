@@ -64,66 +64,65 @@ export default function Home() {
           <div className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-orange-500/20 blur-3xl" />
           <div className="pointer-events-none absolute -left-20 top-32 h-64 w-64 rounded-full bg-purple-600/20 blur-3xl" />
 
-          <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-4 pb-12 pt-8 sm:px-6 sm:pb-16 sm:pt-12 lg:grid-cols-2 lg:gap-12 lg:pb-20 lg:pt-16">
-            <div className="order-2 lg:order-1">
-              <p className="text-xs font-bold tracking-[0.3em] text-amber-300/90 sm:text-sm">
-                BOARD GAME
-              </p>
-              <GameTitle className="mt-3" />
-              <p className="mt-4 text-lg font-bold leading-relaxed text-white sm:text-xl">
-                石をつんで、ゆらして、くずしたら負け!?
-              </p>
+          <div className="relative mx-auto max-w-3xl px-4 pb-12 pt-8 text-center sm:px-6 sm:pb-16 sm:pt-12 lg:pb-20 lg:pt-16">
+            <BoxArtImage
+              className="mx-auto aspect-[4/5] w-full max-w-[240px] sm:max-w-[280px]"
+              priority
+            />
 
-              <div className="mt-5 flex flex-wrap gap-3">
-                <SpeechBubble variant="yellow">
-                  その一手で運命がゆれる!
-                </SpeechBubble>
-                <SpeechBubble variant="dark">
-                  ハラハラドキドキのバランス勝負!
-                </SpeechBubble>
-              </div>
+            <p className="mt-8 text-xs font-bold tracking-[0.3em] text-amber-300/90 sm:text-sm">
+              BOARD GAME
+            </p>
+            <GameTitle className="mt-3" />
+            <p className="mt-4 text-lg font-bold leading-relaxed text-white sm:text-xl">
+              石をつんで、ゆらして、くずしたら負け!?
+            </p>
 
-              <div id="news" className="mt-8">
-                <h2 className="flex items-center gap-2 text-sm font-semibold text-stone-300">
-                  <span className="h-px flex-1 bg-purple-800/60" />
-                  お知らせ
-                  <span className="h-px flex-1 bg-purple-800/60" />
-                </h2>
-                <ul className="mt-4 space-y-3">
-                  {NEWS.map((item) => (
-                    <li
-                      key={item.date}
-                      className="rounded-xl border border-purple-800/50 bg-purple-950/40 p-4 backdrop-blur"
+            <div className="mt-5 flex flex-wrap justify-center gap-3">
+              <SpeechBubble variant="yellow">
+                その一手で運命がゆれる!
+              </SpeechBubble>
+              <SpeechBubble variant="dark">
+                ハラハラドキドキのバランス勝負!
+              </SpeechBubble>
+            </div>
+
+            <div id="news" className="mt-8 text-left">
+              <h2 className="flex items-center gap-2 text-sm font-semibold text-stone-300">
+                <span className="h-px flex-1 bg-purple-800/60" />
+                お知らせ
+                <span className="h-px flex-1 bg-purple-800/60" />
+              </h2>
+              <ul className="mt-4 space-y-3">
+                {NEWS.map((item) => (
+                  <li
+                    key={item.date}
+                    className="rounded-xl border border-purple-800/50 bg-purple-950/40 p-4 backdrop-blur"
+                  >
+                    <time
+                      dateTime={item.date.replace(/\./g, "-")}
+                      className="text-xs text-amber-400/90"
                     >
-                      <time
-                        dateTime={item.date.replace(/\./g, "-")}
-                        className="text-xs text-amber-400/90"
-                      >
-                        {item.date}
-                      </time>
-                      <h3 className="mt-1 text-sm font-semibold text-stone-100 sm:text-base">
-                        {item.title}
-                      </h3>
-                      <p className="mt-1 text-xs leading-relaxed text-stone-400 sm:text-sm">
-                        {item.body}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <a
-                href="#howto"
-                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-amber-500/60 bg-amber-500/10 px-6 py-3.5 text-sm font-bold text-amber-200 transition hover:bg-amber-500/20 sm:w-auto"
-              >
-                遊び方を見る
-                <span aria-hidden>↓</span>
-              </a>
+                      {item.date}
+                    </time>
+                    <h3 className="mt-1 text-sm font-semibold text-stone-100 sm:text-base">
+                      {item.title}
+                    </h3>
+                    <p className="mt-1 text-xs leading-relaxed text-stone-400 sm:text-sm">
+                      {item.body}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <div className="order-1 lg:order-2">
-              <BoxArtImage className="aspect-[4/5] w-full max-w-sm mx-auto lg:max-w-none" priority />
-            </div>
+            <a
+              href="#howto"
+              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-amber-500/60 bg-amber-500/10 px-6 py-3.5 text-sm font-bold text-amber-200 transition hover:bg-amber-500/20 sm:w-auto"
+            >
+              遊び方を見る
+              <span aria-hidden>↓</span>
+            </a>
           </div>
         </section>
 
@@ -158,9 +157,12 @@ export default function Home() {
               description="夕暮れの河原で、カラフルな石を積み上げるハラハラ系パーティゲーム。"
             />
 
-            <div className="mt-12 grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-              <BoxArtImage className="aspect-[3/4] w-full max-w-xs mx-auto lg:max-w-sm" objectPosition="center top" />
-              <div className="space-y-5 text-sm leading-relaxed text-stone-300 sm:text-base">
+            <div className="mt-12 flex flex-col items-center gap-10">
+              <BoxArtImage
+                className="aspect-[3/4] w-full max-w-[220px] sm:max-w-[260px]"
+                objectPosition="center top"
+              />
+              <div className="mx-auto max-w-2xl space-y-5 text-center text-sm leading-relaxed text-stone-300 sm:text-base">
                 <p>
                   「サイの河原」は、日本の「賽の河原」と動物の「サイ」を掛け合わせた
                   石積みボードゲーム。カラフルな石を高く積み、バランスを保ちながら
@@ -178,7 +180,7 @@ export default function Home() {
               {FEATURES.map((feature) => (
                 <article
                   key={feature.title}
-                  className="flex flex-col rounded-2xl border border-purple-800/40 bg-purple-950/30 p-6"
+                  className="flex flex-col items-center rounded-2xl border border-purple-800/40 bg-purple-950/30 p-6 text-center"
                 >
                   <SpeechBubble variant={feature.bubble} className="text-xs sm:text-sm">
                     {feature.title}
@@ -221,9 +223,9 @@ export default function Home() {
               {STEPS.map((item) => (
                 <div
                   key={item.step}
-                  className="rounded-2xl border border-purple-800/40 bg-gradient-to-b from-purple-900/20 to-transparent p-6"
+                  className="rounded-2xl border border-purple-800/40 bg-gradient-to-b from-purple-900/20 to-transparent p-6 text-center"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#ff3b3b] to-[#4db8ff] text-sm font-black text-white shadow-lg">
+                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#ff3b3b] to-[#4db8ff] text-sm font-black text-white shadow-lg">
                     {item.step}
                   </div>
                   <h3 className="mt-4 text-lg font-bold text-white">{item.title}</h3>
@@ -258,7 +260,7 @@ export default function Home() {
                       aspect="aspect-[16/9]"
                     />
                   )}
-                  <div className="p-4 sm:p-5">
+                  <div className="p-4 text-center sm:p-5">
                     <h3 className="font-bold text-stone-100">{item.name}</h3>
                     <p className="mt-1 text-sm text-stone-500">{item.note}</p>
                   </div>
