@@ -33,7 +33,7 @@ export default function SiteHeader() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-purple-900/40 bg-[#1a0f24]/95 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-stone-800/50 bg-[#141218]/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
           <a href="#" className="truncate text-base font-bold tracking-wide text-white sm:text-lg">
             サイの河原
@@ -42,7 +42,7 @@ export default function SiteHeader() {
           <button
             type="button"
             onClick={() => setOpen((prev) => !prev)}
-            className="rounded-lg border border-purple-700/50 bg-purple-950/60 p-2 transition hover:bg-purple-900/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+            className="rounded-lg p-2 text-stone-400 transition hover:bg-stone-800/60 hover:text-stone-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-500"
             aria-expanded={open}
             aria-controls="site-menu"
             aria-label={open ? "メニューを閉じる" : "メニューを開く"}
@@ -63,17 +63,17 @@ export default function SiteHeader() {
 
       <nav
         id="site-menu"
-        className={`fixed right-0 top-0 z-50 flex h-full w-[min(100%,20rem)] flex-col border-l border-purple-800/60 bg-[#1a0f24] shadow-2xl transition-transform duration-300 ${
+        className={`fixed right-0 top-0 z-50 flex h-full w-[min(100%,18rem)] flex-col border-l border-stone-800/60 bg-[#141218] shadow-2xl transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
         aria-hidden={!open}
       >
-        <div className="flex items-center justify-between border-b border-purple-800/60 px-5 py-4">
-          <span className="text-sm font-semibold text-stone-300">メニュー</span>
+        <div className="flex items-center justify-between border-b border-stone-800/60 px-5 py-4">
+          <span className="text-sm text-stone-500">Menu</span>
           <button
             type="button"
             onClick={close}
-            className="rounded-lg border border-purple-700/50 bg-purple-950/60 p-2 transition hover:bg-purple-900/40"
+            className="rounded-lg p-2 text-stone-400 transition hover:bg-stone-800/60"
             aria-label="メニューを閉じる"
           >
             <StoneMenuIcon open />
@@ -86,7 +86,7 @@ export default function SiteHeader() {
               <a
                 href={link.href}
                 onClick={close}
-                className="block rounded-xl px-4 py-3 text-base text-stone-200 transition hover:bg-purple-900/30 hover:text-white"
+                className="block px-4 py-3 text-sm text-stone-300 transition hover:bg-stone-800/40 hover:text-white"
               >
                 {link.label}
               </a>

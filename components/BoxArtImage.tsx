@@ -13,7 +13,7 @@ export default function BoxArtImage({
 }: BoxArtImageProps) {
   return (
     <div
-      className={`relative overflow-hidden rounded-2xl border-2 border-white/10 shadow-2xl shadow-purple-900/30 ${className}`}
+      className={`relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/50 ring-1 ring-white/5 ${className}`}
     >
       <Image
         src="/images/box-art.png"

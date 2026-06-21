@@ -9,15 +9,9 @@ export default function ImagePlaceholder({
 }: ImagePlaceholderProps) {
   return (
     <div
-      className={`relative flex ${aspect} items-center justify-center overflow-hidden rounded-xl border border-dashed border-purple-700/50 bg-gradient-to-br from-purple-950/80 to-[#1a0f24]`}
+      className={`relative flex ${aspect} items-center justify-center overflow-hidden rounded-2xl border border-stone-800/60 bg-stone-900/40`}
     >
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute left-1/4 top-0 h-full w-px bg-stone-500" />
-        <div className="absolute left-2/4 top-0 h-full w-px bg-stone-500" />
-        <div className="absolute left-3/4 top-0 h-full w-px bg-stone-500" />
-        <div className="absolute left-0 top-1/2 h-px w-full bg-stone-500" />
-      </div>
-      <span className="relative rounded-md bg-stone-950/60 px-3 py-1.5 text-xs text-stone-400">
+      <span className="text-xs uppercase tracking-widest text-stone-600">
         {label}
       </span>
     </div>
