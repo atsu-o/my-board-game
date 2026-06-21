@@ -49,15 +49,15 @@ const NEWS = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#141218] text-stone-100">
+    <div className="min-h-screen bg-[#f7f2ea] text-stone-800">
       <SiteHeader />
       <FloatingShopButton />
 
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden px-4 pb-20 pt-10 sm:px-6 sm:pb-28 sm:pt-14">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(120,80,160,0.25),transparent)]" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#141218] to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(255,190,90,0.25),transparent)]" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#f7f2ea] to-transparent" />
 
           <div className="relative mx-auto max-w-lg text-center">
             <BoxArtImage
@@ -69,7 +69,7 @@ export default function Home() {
               BOARD GAME
             </p>
             <GameTitle className="mt-3" />
-            <p className="mt-5 text-lg font-medium leading-relaxed text-stone-200 sm:text-xl">
+            <p className="mt-5 text-lg font-medium leading-relaxed text-stone-700 sm:text-xl">
               石をつんで、ゆらして、くずしたら負け!?
             </p>
             <div className="mt-5">
@@ -92,7 +92,7 @@ export default function Home() {
                     >
                       {item.date}
                     </time>
-                    <p className="mt-1 text-stone-200">{item.title}</p>
+                    <p className="mt-1 text-stone-800">{item.title}</p>
                   </li>
                 ))}
               </ul>
@@ -100,7 +100,7 @@ export default function Home() {
 
             <a
               href="#howto"
-              className="mt-10 inline-block text-sm text-stone-400 underline decoration-stone-600 underline-offset-4 transition hover:text-stone-200"
+              className="mt-10 inline-block text-sm text-stone-700 underline decoration-stone-600 underline-offset-4 transition hover:text-stone-900"
             >
               遊び方を見る
             </a>
@@ -108,19 +108,19 @@ export default function Home() {
         </section>
 
         {/* About */}
-        <section id="about" className="bg-[#1c1a22] px-4 py-20 sm:px-6 sm:py-28">
+        <section id="about" className="bg-[#efe6d8] px-4 py-20 sm:px-6 sm:py-28">
           <div className="mx-auto max-w-3xl">
             <SectionHeading
               label="About"
               title="ゲーム紹介"
               description="賽の河原とサイを掛け合わせた、石積みのパーティゲーム。"
             />
-            <div className="mt-10 space-y-6 text-center text-sm leading-[1.9] text-stone-400 sm:text-base">
+            <div className="mt-10 space-y-6 text-center text-sm leading-[1.9] text-stone-700 sm:text-base">
               <p>
                 カラフルな石を高く積み、バランスを保ちながらライバルと駆け引く。
                 ルールはシンプルなのに、毎ターンの緊張感が違います。
               </p>
-              <p className="text-stone-300">
+              <p className="text-stone-800">
                 その一手で運命がゆれる——
                 ハラハラドキドキのバランス勝負を、テーブルの上で。
               </p>
@@ -130,12 +130,12 @@ export default function Home() {
               {FEATURES.map((feature) => (
                 <article
                   key={feature.title}
-                  className="bg-[#1c1a22] p-6 text-center sm:p-8"
+                  className="bg-[#efe6d8] p-6 text-center sm:p-8"
                 >
                   <span
                     className={`mx-auto block h-1 w-8 rounded-full ${feature.accent}`}
                   />
-                  <h3 className="mt-4 text-base font-medium text-stone-100">
+                  <h3 className="mt-4 text-base font-medium text-stone-600">
                     {feature.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-stone-500">
@@ -169,7 +169,7 @@ export default function Home() {
         </section>
 
         {/* How to play */}
-        <section id="howto" className="bg-[#1c1a22] px-4 py-20 sm:px-6 sm:py-28">
+        <section id="howto" className="bg-[#efe6d8] px-4 py-20 sm:px-6 sm:py-28">
           <div className="mx-auto max-w-4xl">
             <SectionHeading
               label="How to Play"
@@ -188,7 +188,7 @@ export default function Home() {
                     {item.step}
                   </span>
                   <div className="flex-1">
-                    <h3 className="text-lg font-medium text-stone-100">
+                    <h3 className="text-lg font-medium text-stone-600">
                       {item.title}
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-stone-500">
@@ -214,7 +214,7 @@ export default function Home() {
                   key={item.name}
                   className="flex flex-col items-center gap-1 py-5 text-center sm:flex-row sm:justify-between sm:text-left"
                 >
-                  <span className="font-medium text-stone-200">{item.name}</span>
+                  <span className="font-medium text-stone-800">{item.name}</span>
                   <span className="text-sm text-stone-500">{item.note}</span>
                   {i === 0 && (
                     <span className="sr-only">画像は箱絵を参照</span>
@@ -229,19 +229,19 @@ export default function Home() {
         </section>
 
         {/* CTA */}
-        <section className="bg-[#1c1a22] px-4 py-20 sm:px-6 sm:py-28">
+        <section className="bg-[#efe6d8] px-4 py-20 sm:px-6 sm:py-28">
           <div className="mx-auto max-w-lg text-center">
-            <h2 className="text-2xl font-semibold text-white sm:text-3xl">
+            <h2 className="text-2xl font-semibold text-stone-900 sm:text-3xl">
               キャンプ場でも、仲間と。
             </h2>
-            <p className="mt-4 text-sm leading-relaxed text-stone-400">
+            <p className="mt-4 text-sm leading-relaxed text-stone-700">
               みんなでワイワイ遊べるカジュアルな石積みゲーム。
             </p>
             <a
               href={SHOP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-stone-100 px-8 py-3.5 text-sm font-medium text-stone-900 transition hover:bg-white sm:w-auto"
+              className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-amber-500 px-8 py-3.5 text-sm font-medium text-white transition hover:bg-amber-600 sm:w-auto"
             >
               購入ページへ
             </a>

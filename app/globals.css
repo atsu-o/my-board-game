@@ -63,12 +63,12 @@ body {
   position: relative;
   border-radius: 14px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(0, 0, 0, 0.10)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(0, 0, 0, 0.92)),
     radial-gradient(520px 220px at 18% 18%, rgba(255, 255, 255, 0.10), transparent 55%),
     linear-gradient(135deg, rgba(15, 28, 26, 0.98), rgba(8, 15, 17, 0.98));
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(120,90,40,0.15);
   box-shadow:
-    0 18px 55px rgba(0, 0, 0, 0.55),
+    0 14px 35px rgba(80,60,30,0.10),
     inset 0 1px 0 rgba(255, 255, 255, 0.14);
   overflow: hidden;
 }
